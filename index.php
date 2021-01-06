@@ -1,6 +1,7 @@
 <?php
 
 include('data.php');
+
 // Je voudrais une fonction qui s'appelerait presentPerson() qui me me présente la personne sous la forme suivante : 'Salut, je suis [nomdelapersonne].' 
 // et si c'est une femme 'Je suis née le [datedenaissance]'
 // si c'est un homme 'Je suis né le [datedenaissance]
@@ -34,4 +35,5 @@ function endOfMonth(array $personData) {
 /* Je veux une page html ayant pour title Personne et affichant dans un tableau :
 Nom, Genre, Date de naissance les données des différentes personnes
 */
+
 ?>
