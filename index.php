@@ -45,23 +45,29 @@ $personLisa = new Person;
 
 //var_dump($personLisa);
 
-$personLisa->name= 'Lisa';
+//$personLisa->name= 'Lisa';
 $personLisa->age = 25;
 $personLisa->birthday = '1986-03-11';
 $personLisa->gender = 'woman';
 $personLisa->size = 160;
 
-var_dump($personLisa);
+//var_dump($personLisa);
 
 $personMarc = new Person;
-$personMarc->name = 'Marc';
+//$personMarc->name = 'Marc';
 $personMarc->age = 58;
 $personMarc->birthday = '1945-03-11';
 $personMarc->gender = 'men';
 $personMarc->size = 189;
 
+//var_dump($personMarc);
+
+//$personMarc->name = 'Raoul';
+
+//var_dump($personMarc);
+
+$personMarc->setName('Polo');
+
 var_dump($personMarc);
-
-
 
 ?>
