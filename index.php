@@ -70,6 +70,7 @@ $personMarc->size = 189;
 
 $personMarc->presentPerson();
 
+/*
 $personSecrete = new PersonPrivate;
 
 var_dump($personSecrete);
@@ -79,5 +80,11 @@ $personSecrete->setAge(85);
 
 echo $personSecrete->getName();
 echo $personSecrete->getAge();
+*/
+
+$personBelle = new PersonPrivate('Bella', 47, '1974-04-01', 'woman', 175);
+
+var_dump($personBelle);
+
 
 ?>

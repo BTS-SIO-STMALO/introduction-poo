@@ -4,11 +4,20 @@
 
 class PersonPrivate {
 
-    private $name;
-    private $age; 
+    private $name = "Exemple"; // Ceci est un exemple d'assignation d'une valeur par défaut
+    private $age = 0; // Ceci est un exemple d'assignation d'une valeur par défaut
     private $birthday;
     private $gender;
     private $size;
+
+    // https://www.php.net/manual/fr/language.oop5.decon.php
+    function __construct(string $newName = 'Lolo', $newAge = 18 , $newBirthday, $newGender, int $newSize) {
+        $this->name = $newName;
+        $this->age =$newAge;
+        $this->birthday =$newBirthday;
+        $this->gender =$newGender;
+        $this->size =$newSize;        
+    }
 
     function presentPerson() {
         echo 'Salut, je suis '.$this->name.'<br/>';
