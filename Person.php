@@ -4,7 +4,7 @@
 
 class Person {
     // ici je commence par définir toutes les propriétés de ma classe
-    private $name;
+    public $name;
     public $age; 
     public $birthday;
     public $gender;
@@ -23,13 +23,5 @@ class Person {
             echo 'Je suis née le ' .$this->birthday .'<br/>';
         }
         echo 'Je mesure '. $this->size.'cm';
-    }
-
-    function getName() {
-        return $this->name;
-    }
-
-    function setName($newName) {
-        $this->name = $newName;
     }
 }

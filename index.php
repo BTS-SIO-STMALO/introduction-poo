@@ -2,6 +2,7 @@
 
 //include('data.php');
 include('Person.php');
+require('PersonPrivate.php');
 
 // Je voudrais une fonction qui s'appelerait presentPerson() qui me me présente la personne sous la forme suivante : 'Salut, je suis [nomdelapersonne].' 
 // et si c'est une femme 'Je suis née le [datedenaissance]'
@@ -46,18 +47,19 @@ $personLisa = new Person;
 //var_dump($personLisa);
 
 //$personLisa->name= 'Lisa';
+$personLisa->name = 'Lisa';
 $personLisa->age = 25;
 $personLisa->birthday = '1986-03-11';
 $personLisa->gender = 'woman';
 $personLisa->size = 160;
 
-//var_dump($personLisa);
+var_dump($personLisa);
 
 $personMarc = new Person;
-//$personMarc->name = 'Marc';
+$personMarc->name = 'Marc';
 $personMarc->age = 58;
 $personMarc->birthday = '1945-03-11';
-$personMarc->gender = 'men';
+$personMarc->gender = 'man';
 $personMarc->size = 189;
 
 //var_dump($personMarc);
@@ -66,8 +68,16 @@ $personMarc->size = 189;
 
 //var_dump($personMarc);
 
-$personMarc->setName('Polo');
+$personMarc->presentPerson();
 
-var_dump($personMarc);
+$personSecrete = new PersonPrivate;
+
+var_dump($personSecrete);
+
+$personSecrete->setName('Micheline');
+$personSecrete->setAge(85);
+
+echo $personSecrete->getName();
+echo $personSecrete->getAge();
 
 ?>
