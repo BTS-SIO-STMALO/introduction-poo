@@ -3,6 +3,7 @@
 //include('data.php');
 include('Person.php');
 require('PersonPrivate.php');
+require('Point.php');
 
 // Je voudrais une fonction qui s'appelerait presentPerson() qui me me présente la personne sous la forme suivante : 'Salut, je suis [nomdelapersonne].' 
 // et si c'est une femme 'Je suis née le [datedenaissance]'
@@ -82,9 +83,21 @@ echo $personSecrete->getName();
 echo $personSecrete->getAge();
 */
 
-$personBelle = new PersonPrivate('Bella', 47, '1974-04-01', 'woman', 175);
+//$personBelle = new PersonPrivate('Bella', 47, '1974-04-01', 'woman', 175);
 
-var_dump($personBelle);
+$personTest = new PersonPrivate('2020-15-02', 'woman', 15);
 
+var_dump($personTest);
+
+
+// Pass both parameters.
+$p1 = new Point(4, 5);
+var_dump($p1);
+// Pass only the required parameter. $y will take its default value of 0.
+$p2 = new Point(4);
+var_dump($p2);
+// With named parameters (as of PHP 8.0):
+//$p3 = new Point(y: 5, x: 4);
+?>
 
 ?>
